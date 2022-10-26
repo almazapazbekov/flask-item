@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="form-group">
+<form method="POST">
+        {{ form.csrf_token }}
+        {{ form.name.label }}
+        {{ form.name(class="form-control") }}
+        {{ form.age.label }}
+        {{ form.age(class="form-control") }}
+        {{ form.item_id.label }}
+        {{ form.item_id(class="form-control") }}
+        {{ form.date_purchase.label }}
+        {{ form.date_purchase (class="form-control")}}
+        {{ form.submit }}
+    </form>
+    </div>
+{% endblock %}

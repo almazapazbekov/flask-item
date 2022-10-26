@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="form-group">
+      <form method="POST">
+          {{ form.csrf_token }}
+          {{form.name.label}}
+          {{form.name(class="form-control")}}
+          {{form.price.label}}
+          {{form.price(class="form-control")}}
+          {{form.submit(class="btn btn-primary")}}
+      </form>
+    </div>
+
+{% endblock %}
